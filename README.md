@@ -1,10 +1,3 @@
-# 4saisonsCard
-
-
-
-
-
-
 
 <div align="center">
 
