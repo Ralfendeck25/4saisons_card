@@ -33,3 +33,6 @@ Saison froide marquée par le repos de la nature et nuits longues.
   </tr>
 </table>
 </div>
+
+
+[![Deploy Jekyll with GitHub Pages dependencies preinstalled](https://github.com/Ralfendeck25/4saisons_card/actions/workflows/jekyll-gh-pages.yml/badge.svg)](https://github.com/Ralfendeck25/4saisons_card/actions/workflows/jekyll-gh-pages.yml)
