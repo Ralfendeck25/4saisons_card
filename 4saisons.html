@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Quatre Saisons</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+
+        /* Personnalisation des couleurs */
+        :root {
+            --primary-color: #51e9d2;
+            --secondary-color: #a837ff;
+            --bg-color: #324f4e;
+            --card-bg-color: #ffffff;
+            --text-color: #fff;
+        }
+
+        /* Flexbox pour forcer le footer à rester en bas de la page */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex-grow: 1;
+        }
+
+        .card {
+            height: 300px; /* Ajustez la hauteur de la carte selon vos préférences */
+        }
+
+        /* Assurez-vous que l'image prend toute la hauteur de la carte */
+        .card-image img {
+            object-fit: cover;
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="bg-[#324f4e] font-urbanist flex justify-center items-center p-16">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-10 bg-[#324f4e] py-4 shadow-lg">
+        <div class="flex items-center justify-center">
+            <a href="#" class="flex items-center gap-2 text-2xl font-semibold text-white">
+                <img src="peacock.png" alt="Logo" class="object-cover w-10 h-10 rounded-full">
+                <span>Les Quatre Saisons</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main class="w-full max-w-screen-xl px-4 mt-24">
+        <section class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <!-- Printemps -->
+            <div class="relative overflow-hidden transition duration-500 transform rounded-lg shadow-lg cursor-pointer card hover:scale-105 hover:shadow-xl">
+                <div class="relative w-full h-full card-image">
+                    <img src="printemps.jpg" alt="Printemps" class="object-cover w-full h-full transition duration-500 transform hover:scale-110">
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 p-6 text-white transition duration-500 ease-in-out transform translate-y-8 bg-black opacity-0 card-content bg-opacity-60 hover:opacity-100 hover:translate-y-0">
+                    <h2 class="text-xl font-semibold mb-2 text-[#51e9d2]">Printemps</h2>
+                    <p class="text-sm">Le printemps est une saison de renouveau, de floraison et de chaleur douce.</p>
+                </div>
+            </div>
+
+            <!-- Été -->
+            <div class="relative overflow-hidden transition duration-500 transform rounded-lg shadow-lg cursor-pointer card hover:scale-105 hover:shadow-xl">
+                <div class="relative w-full h-full card-image">
+                    <img src="ete.jpg" alt="Été" class="object-cover w-full h-full transition duration-500 transform hover:scale-110">
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 p-6 text-white transition duration-500 ease-in-out transform translate-y-8 bg-black opacity-0 card-content bg-opacity-60 hover:opacity-100 hover:translate-y-0">
+                    <h2 class="text-xl font-semibold mb-2 text-[#51e9d2]">Été</h2>
+                    <p class="text-sm">L'été est la saison la plus chaude, avec des journées longues et ensoleillées.</p>
+                </div>
+            </div>
+
+            <!-- Automne -->
+            <div class="relative overflow-hidden transition duration-500 transform rounded-lg shadow-lg cursor-pointer card hover:scale-105 hover:shadow-xl">
+                <div class="relative w-full h-full card-image">
+                    <img src="autone.jpg" alt="Automne" class="object-cover w-full h-full transition duration-500 transform hover:scale-110">
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 p-6 text-white transition duration-500 ease-in-out transform translate-y-8 bg-black opacity-0 card-content bg-opacity-60 hover:opacity-100 hover:translate-y-0">
+                    <h2 class="text-xl font-semibold mb-2 text-[#51e9d2]">Automne</h2>
+                    <p class="text-sm">L'automne est la saison où les feuilles tombent, et les températures commencent à baisser.</p>
+                </div>
+            </div>
+
+            <!-- Hiver -->
+            <div class="relative overflow-hidden transition duration-500 transform rounded-lg shadow-lg cursor-pointer card hover:scale-105 hover:shadow-xl">
+                <div class="relative w-full h-full card-image">
+                    <img src="hiver.jpg" alt="Hiver" class="object-cover w-full h-full transition duration-500 transform hover:scale-110">
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 p-6 text-white transition duration-500 ease-in-out transform translate-y-8 bg-black opacity-0 card-content bg-opacity-60 hover:opacity-100 hover:translate-y-0">
+                    <h2 class="text-xl font-semibold mb-2 text-[#51e9d2]">Hiver</h2>
+                    <p class="text-sm">L'hiver est la saison froide, souvent accompagnée de neige et de froid intense.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Message au clic -->
+        <div id="messageBox" class="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-[#51e9d2] text-white py-2 px-6 rounded-lg text-lg hidden"></div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#324f4e] text-white py-6 text-center mt-auto">
+        <p class="mb-2 text-sm">© 2025 Les Quatre Saisons,<br>Peterson Paris</p>
+        <div class="flex justify-center gap-6">
+            <a href="https://github.com/Ralfendeck25" target="_blank"
+            class="opacity-70 hover:opacity-100 transition-opacity duration-300">
+            <i class="fab fa-github text-xl"></i>
+        </a>
+        <a href="mailto:parispeterson89@gmail.com"
+            class="opacity-70 hover:opacity-100 transition-opacity duration-300">
+            <i class="fas fa-envelope text-xl"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/peterson-paris-750ba493/" target="_blank"
+            class="opacity-70 hover:opacity-100 transition-opacity duration-300">
+            <i class="fab fa-linkedin text-xl"></i>
+        </a>
+    </div>
+    </footer>
+</body>
+</html>
